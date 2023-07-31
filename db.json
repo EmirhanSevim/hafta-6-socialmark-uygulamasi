@@ -1,0 +1,131 @@
+{
+  "users": [
+    {
+      "fullname": "esevim",
+      "username": "emirhan",
+      "password": "2ec57c8d873e1765ac0c37ef8fcebb858cd62c4e",
+      "id": 1
+    },
+    {
+      "fullname": "daniel",
+      "username": "deneme",
+      "password": "U2FsdGVkX18/f+0UjemBjTf/Y8BQaLH1rN/D0xhVldw=",
+      "id": 2
+    },
+    {
+      "username": "sevim",
+      "fullname": "Emirhan",
+      "password": "682d0c21835b9cb5cbdbb71076c7846dccd42b44",
+      "id": 3
+    },
+    {
+      "username": "sevim",
+      "fullname": "Emirhan",
+      "password": "682d0c21835b9cb5cbdbb71076c7846dccd42b44",
+      "id": 4
+    },
+    {
+      "username": "a",
+      "fullname": "Emirhan",
+      "password": "56890b0082ec7962cd7bee53e8f2dc0fc325c116",
+      "id": 6,
+      "likes": [
+        2
+      ],
+      "bookmarks": [
+        3
+      ]
+    }
+  ],
+  "bookmarks": [
+    {
+      "title": "Vue Doküman",
+      "url": "https://harmonyerp.com.tr",
+      "categoryId": 5,
+      "description": "harmonyerp üretmeyi sevenlere...",
+      "userId": 6,
+      "created_at": "2023-07-26T07:27:21.675Z",
+      "id": 2
+    },
+    {
+      "title": "Deneme",
+      "url": "https://",
+      "categoryId": 3,
+      "description": "Güzel bir deneme",
+      "userId": 6,
+      "created_at": "2023-07-26T07:31:21.874Z",
+      "id": 3
+    },
+    {
+      "title": "Güzel şarkılar",
+      "url": "http://",
+      "categoryId": 6,
+      "description": "Çok güzel şarkılar dinlemek istiyorsanız bu siteye geliniz ve keyfinize bakınız",
+      "userId": 6,
+      "created_at": "2023-07-26T07:53:14.090Z",
+      "id": 4
+    },
+    {
+      "title": "Çok güzel şarkılar",
+      "url": "http://",
+      "categoryId": 6,
+      "description": "Çok güzel şarkılar dinlemek istiyorsanız bu siteye geliniz bu siteye gelirseniz çok güzel şarkılar dinlemiş olursunuz",
+      "userId": 6,
+      "created_at": "2023-07-26T07:54:32.906Z",
+      "id": 5
+    },
+    {
+      "title": "Deneme",
+      "url": "http://gesasaglik.com",
+      "categoryId": 1,
+      "description": "deneme deneme deneme",
+      "userId": 1,
+      "created_at": "2023-07-26T12:40:45.605Z",
+      "id": 6
+    },
+    {
+      "title": "aaa",
+      "url": "sss",
+      "categoryId": 4,
+      "description": "sssssaaaaa",
+      "userId": 6,
+      "created_at": "2023-07-26T12:41:05.541Z",
+      "id": 7
+    },
+    {
+      "title": "likesız",
+      "url": "http://",
+      "categoryId": 4,
+      "description": "likesız",
+      "userId": 6,
+      "created_at": "2023-07-27T11:37:37.126Z",
+      "id": 8
+    }
+  ],
+  "categories": [
+    {
+      "name": "Vue.js",
+      "id": 1
+    },
+    {
+      "name": "React.js",
+      "id": 2
+    },
+    {
+      "name": "Frontend",
+      "id": 3
+    },
+    {
+      "name": "Backend",
+      "id": 4
+    },
+    {
+      "name": "Cloud",
+      "id": 5
+    },
+    {
+      "name": "Sosyal Yaşam",
+      "id": 6
+    }
+  ]
+}
