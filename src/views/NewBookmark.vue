@@ -38,22 +38,23 @@ export default {
   },
   methods: {
     onSave() {
-      console.log(this.userData.categoryId);
-      return false;
-      // const saveData = {
-      //   ...this.userData,
-      //   userId: this._getCurrentUser?.id,
-      //   created_at: new Date(),
-      // };
-      // this.$appAxios.post('/bookmarks', saveData).then((save_bookmark_response) => {
-      //   console.log(save_bookmark_response);
-      //   Object.keys(this.userData)?.forEach((field) => (this.userData[field] = null));
-      //   this.$socket.emit('NEW_BOOKMARK_EVENT', {
-      //     ...save_bookmark_response.data,
-      //     user: this._getCurrentUser,
-      //   });
-      //   this.$router.push({ name: 'HomePage' });
-      // });
+      const saveData = {
+        ...this.userData,
+        userId: this._getCurrentUser?.id,
+        created_at: new Date(),
+      };
+      this.$appAxios.post('/bookmarks', saveData).then((save_bookmark_response) => {
+        console.log(save_bookmark_response);
+        Object.keys(this.userData)?.forEach((field) => (this.userData[field] = null));
+        const socketData = {
+          ...save_bookmark_response.data,
+          user: this._getCurrentUser,
+          category: this.categoryList?.find((c) => c.id == saveData.categoryId),
+        };
+
+        this.$socket.emit('NEW_BOOKMARK_EVENT', socketData);
+        this.$router.push({ name: 'HomePage' });
+      });
     },
   },
   computed: {
