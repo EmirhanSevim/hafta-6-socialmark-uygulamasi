@@ -3,7 +3,7 @@
     <div class="p-3">
       <a :href="item.url" target="_blank" class="hover:text-black font-bold text-l mb-1 text-gray-600 text-center">{{ item.title || '-' }}</a>
       <div class="flex items-center justify-center mt-2 gap-x-1">
-        <button @click="_likeItem" class="like-btn group" :class="{ 'bookmark-item-active': alreadyLiked }">
+        <button @click="_likeItem" class="like-btn group" :class="{ 'like-item-active': alreadyLiked }">
           <svg xmlns="http://www.w3.org/2000/svg" class="fill-current group-hover:text-white" height="24" viewBox="0 0 24 24" width="24">
             <path d="M0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none" />
             <path
