@@ -51,7 +51,6 @@ export default {
           user: this._getCurrentUser,
           category: this.categoryList?.find((c) => c.id == saveData.categoryId),
         };
-
         this.$socket.emit('NEW_BOOKMARK_EVENT', socketData);
         this.$router.push({ name: 'HomePage' });
       });

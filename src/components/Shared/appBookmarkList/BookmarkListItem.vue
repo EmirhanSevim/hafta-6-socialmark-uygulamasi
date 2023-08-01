@@ -50,6 +50,8 @@ export default {
   },
   methods: {
     likeItem() {
+      //! kulanıcının like tuşuna basma durumuna göre database'ye kullanıcının id'si giriliyor, aynı id'ye sahip bir kullanıcı
+      //! tekrar like tuşuna basarsa like siliniyor bu şekilde youtube benzeri bir sistem oluşmuş oluyor.
       this.$appAxios({
         url: this.alreadyLiked ? `/user_likes/${this.likedItem.id}` : 'user_likes',
         method: this.alreadyLiked ? 'DELETE' : 'POST',
@@ -79,6 +81,7 @@ export default {
         this.$store.commit('setLikes', likes);
       });
     },
+
     bookmarkItem() {
       let bookmarks = [...this._userBookmarks];
       if (!this.alreadyBookmarked) {
