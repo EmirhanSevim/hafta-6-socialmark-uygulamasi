@@ -18,8 +18,15 @@ server.listen(PORT, () => {
   io.on('connection', (socket) => {
     console.log('HOPPAAAAAAAA');
     console.log(socket.id);
-
+    //! KARŞILAMA MESAJI GÖNDER
     socket.emit('WELCOME_MESSAGE', `Ooooo ${socket.id} kardeşim hoşgeldin beyaa..`);
+    // io.in(roomID).emit()
+    socket.on('NEW_BOOKMARK_EVENT', (bookmark) => {
+      console.log('bookmark :>> ', bookmark);
+      // io.emit('NEW_BOOKMARK_ADDED', bookmark);
+      //! GÖNDEREN HARİÇ HERKESE GÖNDEREN BİLGİSİNİ GÖNDER
+      socket.broadcast.emit('NEW_BOOKMARK_ADDED', bookmark);
+    });
   });
 });
 

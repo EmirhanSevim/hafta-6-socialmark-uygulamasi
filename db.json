@@ -35,6 +35,27 @@
       "bookmarks": [
         3
       ]
+    },
+    {
+      "username": "2",
+      "fullname": "2",
+      "password": "ebdf6be86b6df381f974a8345b8248e8645d348f",
+      "id": 7
+    },
+    {
+      "username": "6",
+      "fullname": "asd",
+      "password": "91bf5bb3085e9dc3984728f849cdd3f3f278b060",
+      "id": 8,
+      "likes": [
+        7,
+        2,
+        13
+      ],
+      "bookmarks": [
+        4,
+        14
+      ]
     }
   ],
   "bookmarks": [
@@ -100,6 +121,69 @@
       "userId": 6,
       "created_at": "2023-07-27T11:37:37.126Z",
       "id": 8
+    },
+    {
+      "title": "Yeni Yer İmi",
+      "url": "http://.......",
+      "categoryId": 5,
+      "description": "aaaaaaaaa",
+      "userId": 6,
+      "created_at": "2023-07-31T14:52:02.023Z",
+      "id": 9
+    },
+    {
+      "title": "deneme",
+      "url": "asdasdad",
+      "categoryId": 1,
+      "description": "aaaaaaa",
+      "userId": 6,
+      "created_at": "2023-07-31T15:02:01.943Z",
+      "id": 10
+    },
+    {
+      "title": "2",
+      "url": "2",
+      "categoryId": 2,
+      "description": "2",
+      "userId": 7,
+      "created_at": "2023-08-01T06:10:31.032Z",
+      "id": 11
+    },
+    {
+      "title": "3",
+      "url": "3",
+      "categoryId": 2,
+      "description": "3",
+      "userId": 7,
+      "created_at": "2023-08-01T06:12:00.872Z",
+      "id": 12
+    },
+    {
+      "title": "mfatih",
+      "url": "adsasd",
+      "categoryId": 4,
+      "description": "mfatih",
+      "userId": 8,
+      "created_at": "2023-08-01T06:25:04.087Z",
+      "id": 13
+    },
+    {
+      "title": "testX",
+      "url": "xx",
+      "categoryId": 2,
+      "description": "TEST X",
+      "userId": 8,
+      "created_at": "2023-08-01T06:43:09.167Z",
+      "id": 14
+    },
+    {
+      "title": "den",
+      "url": "ss",
+      "categoryId": 4,
+      "description": "den",
+      "userId": 8,
+      "created_at": "2023-08-01T06:56:38.400Z",
+      "id": 15
     }
   ],
   "categories": [
