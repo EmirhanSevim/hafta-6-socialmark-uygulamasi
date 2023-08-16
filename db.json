@@ -30,7 +30,10 @@
       "password": "56890b0082ec7962cd7bee53e8f2dc0fc325c116",
       "id": 6,
       "likes": [
-        2
+        3,
+        6,
+        8,
+        4
       ],
       "bookmarks": [
         3

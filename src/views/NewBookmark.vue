@@ -43,9 +43,14 @@ export default {
         userId: this._getCurrentUser?.id,
         created_at: new Date(),
       };
+      // Sunucuya POST isteği yaparak yeni bookmarkı kaydederiz.
       this.$appAxios.post('/bookmarks', saveData).then((save_bookmark_response) => {
         console.log(save_bookmark_response);
+
+        // Kaydetme işlemi başarılı olursa, kullanıcının girdiği verileri temizleriz.
         Object.keys(this.userData)?.forEach((field) => (this.userData[field] = null));
+
+        // bookmark verilerini WebSocket üzerinden diğer kullanıcılara bildiririz.
         const socketData = {
           ...save_bookmark_response.data,
           user: this._getCurrentUser,
@@ -57,6 +62,7 @@ export default {
     },
   },
   computed: {
+    // Vuex getter'larını haritalarız.
     ...mapGetters(['_getCurrentUser']),
   },
 };

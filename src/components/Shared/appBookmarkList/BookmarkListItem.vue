@@ -31,7 +31,7 @@
       </div>
       <div class="text-xs text-gray-400 mt-2 flex justify-between">
         <a href="#" class="hover:text-black">{{ userName }}</a>
-        <span>14 Mart</span>
+        <span>1 Ekim</span>
       </div>
     </div>
     <div class="bg-red-200 p-1 text-red-900 text-center text-sm">{{ categoryName }}</div>
@@ -50,8 +50,6 @@ export default {
   },
   methods: {
     likeItem() {
-      //! kulanıcının like tuşuna basma durumuna göre database'ye kullanıcının id'si giriliyor, aynı id'ye sahip bir kullanıcı
-      //! tekrar like tuşuna basarsa like siliniyor bu şekilde youtube benzeri bir sistem oluşmuş oluyor.
       this.$appAxios({
         url: this.alreadyLiked ? `/user_likes/${this.likedItem.id}` : 'user_likes',
         method: this.alreadyLiked ? 'DELETE' : 'POST',

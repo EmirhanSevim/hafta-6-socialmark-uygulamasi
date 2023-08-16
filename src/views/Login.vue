@@ -23,12 +23,16 @@ export default {
     };
   },
   methods: {
+    //gönderildiğinde(onSubmit)
     onSubmit() {
       // GET /posts?title=json-server&author=typicode
       const password = CryptoJs.HmacSHA1(this.userData.password, this.$store.getters._saltKey).toString();
+
+      //sunucudan kullanıcı doğrulaması yapması için kullanıcı adı ve şifreyi içeren get isteği yolluyoruz
       this.$appAxios
         .get(`/users?username=${this.userData.username}&password=${password}`)
         .then((login_response) => {
+          //kullanıcı onaylanırsa kullanıcı adını kaydedip ana sayfaya yönlendiriyoruz
           if (login_response?.data?.length > 0) {
             this.$store.commit('setUser', login_response?.data[0]);
             this.$router.push({ name: 'HomePage' });
